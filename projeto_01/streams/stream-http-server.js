@@ -5,7 +5,7 @@ class InverseNumberStream extends Transform {
   _transform(chunk, encoding, callback){
     const transformed = Number(chunk.toString()) * -1;
     
-    console.log(transformed)
+    console.log(transformed , `teste`)
 
     callback(null, Buffer.from(String(transformed)));
   }
